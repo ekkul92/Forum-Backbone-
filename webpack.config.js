@@ -29,6 +29,9 @@ module.exports = {
     plugins: [
         new webpack.ProvidePlugin({
           _: 'underscore'
+        }),
+        new webpack.DefinePlugin({
+          BACKEND_URL: ''
         })
     ]
 };

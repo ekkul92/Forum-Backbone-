@@ -10,10 +10,9 @@ export default View.extend({
 
   initialize: function() {
     this.template = tmpl;
-
+    
     this.listenTo(this.model, 'change', this.render);
     this.listenTo(this.model, 'destroy', this.remove);
-
 
   },
 
@@ -21,22 +20,11 @@ export default View.extend({
     var html = this.template(this.model.toJSON());
     this.$el.html(html);
 
-
-
   },
 
   delete_theme: function(){
-
     this.model.idAttribute = 'name';
     this.model.destroy();
-    /*fetch('api/themes/' + theme_name, {method: "DELETE"}).
-     then(response => response.json()).
-     then( ()=> {
-     new showSections().show();
-     });
-     */
   }
-
-
 
 })

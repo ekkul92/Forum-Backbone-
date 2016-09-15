@@ -8,6 +8,6 @@ export default Collection.extend({
     this.section = section;
   },
   url: function () {
-    return '/api/sections/' + this.section + '/themes';
+    return BACKEND_URL + '/api/sections/' + this.section + '/themes';
   }
 })

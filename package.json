@@ -9,7 +9,9 @@
   "scripts": {
     "start": "node .",
     "pretest": "eslint .",
-    "posttest": "nsp check"
+    "posttest": "nsp check",
+    "build": "webpack --config=webpack.config.production.js",
+    "bundle": "webpack"
   },
   "dependencies": {
     "babel-core": "~6.13.1",
